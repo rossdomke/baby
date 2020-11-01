@@ -25,7 +25,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
 
 </head>
 <body>
@@ -34,14 +34,78 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="column" style="margin-top: 20%; text-align: center;">
+      <div class="column" style="margin-top: 15%; text-align: center;">
         <h1>We're Having a Baby</h1>
         <p><span class="accent-underline">Oh lawd it's coming</span></p>
       </div>
     </div>
+    <div class="row border">
+      <div class="one-third column">
+        <img class="u-max-full-width" src="images/7-wk-ultrasound.jpg"/>
+      </div>
+      <div Class="two-thirds column">
+        <h3>7 Week Ultra Sound</h3>
+        <p>Yep it's really in there. Looks like it's got dad's ears, and moms dimples.</p>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="column text-center mb-1">
+        <h3 class="m-0"><span class="accent-underline">FAQ</span></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one-half column mb-1">
+        <h5 class="m-0"><span class="accent-underline">How far along are you?</span></h5>
+        <p class="m-0"><b><span id="weekNum">0</span></b> weeks <b><span id="dayNum">0</span></b> days</p>
+      </div>
+      <div class="one-half column mb-1">
+        <h5 class="m-0"><span class="accent-underline">When are you due?</span></h5>
+        <p class="m-0">The due date is April 13th. Which is just 2 days after Ross' birthday.</p>
+        <p class="m-0"><small>(Ross and his Grandfather shared the same birthday)</small></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one-half column mb-1">
+        <h5 class="m-0"><span class="accent-underline">Do you want a boy or girl?</span></h5>
+        <p class="m-0">We both want a boy (but happy with either).</p>
+      </div>
+      <div class="one-half column mb-1">
+        <h5 class="m-0"><span class="accent-underline">Are you registered anywhere?</span></h5>
+        <p class="m-0">Net yet, but once we find out the sex on 22nd of Nov we will be.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one-half column mb-1">
+        <h5 class="m-0"><span class="accent-underline">Any names picked out?</span></h5>
+        <p class="m-0">We've been throwing a lot around, but boy names are hard. Were open to suggestions. Send them over to baby@domke.io</p>
+      </div>
+    </div>
+    <div class="row mb-1">
+      <div class="column text-center">
+        <h3 class="m-0"><span class="accent-underline">Want updates?</span></h3>
+        <p class="mb-1">Put you're email below and we'll send you updates periodically</p>
+        <form action="https://formspree.io/f/mwkwbbdk" method="POST">
+          <input type="email" name="_replyto" placeholder="Email" required>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </div>
   </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
 </body>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script>
+  const dueDate = dayjs('2021-04-13');
+  const pregLength = 280;
+  const today = dayjs();
+  const totalDaysPreg = pregLength - dueDate.diff(today, 'days');
+  const weeksPreg = Math.floor(totalDaysPreg / 7);
+  const daysPreg = totalDaysPreg % 7;
+  const weekEle = document.getElementById('weekNum');
+  const dayEle = document.getElementById('dayNum');
+  weekEle.innerHTML = weeksPreg;
+  dayEle.innerHTML = daysPreg;
+</script>
 </html>
