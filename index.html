@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs
@@ -26,8 +27,20 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.ico">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-03FGMVTT5G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-03FGMVTT5G');
+  </script>
 </head>
+
 <body>
 
   <!-- Primary Page Layout
@@ -46,14 +59,14 @@
     </div>
     <div class="row border">
       <div class="one-third column">
-        <img class="u-max-full-width" src="images/7-wk-ultrasound.jpg"/>
+        <img class="u-max-full-width" src="images/7-wk-ultrasound.jpg" />
       </div>
       <div Class="two-thirds column">
         <h3>7 Week Ultra Sound</h3>
         <p>Yep it's really in there. Looks like it's got dad's ears, and moms dimples.</p>
       </div>
     </div>
-    <br/>
+    <br />
     <div class="row">
       <div class="column text-center mb-1">
         <h3 class="m-0"><span class="accent-underline">FAQ</span></h3>
@@ -83,7 +96,8 @@
     <div class="row">
       <div class="one-half column mb-1">
         <h5 class="m-0"><span class="accent-underline">Any names picked out?</span></h5>
-        <p class="m-0">We've been throwing a lot around, but boy names are hard. Were open to suggestions. Send them over to baby@domke.io</p>
+        <p class="m-0">We've been throwing a lot around, but boy names are hard. Were open to suggestions. Send them
+          over to baby@domke.io</p>
       </div>
       <div class="one-half column mb-1">
         <h5 class="m-0"><span class="accent-underline">Is Braylen excited?</span></h5>
@@ -117,4 +131,5 @@
   weekEle.innerHTML = weeksPreg;
   dayEle.innerHTML = daysPreg;
 </script>
+
 </html>
