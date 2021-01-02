@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/baby.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -49,7 +50,7 @@
     <div class="row">
       <div class="column" style="margin-top: 15%; text-align: center;">
         <h1>We're Having a Baby</h1>
-        <p><span class="accent-underline">Oh Lawd, it's coming</span></p>
+        <p><span class="accent-underline">Oh Lawd, he coming</span></p>
       </div>
     </div>
     <div class="row" style="display: flex;">
@@ -57,7 +58,42 @@
         <img class="u-max-full-width" src="images/baby-announcement-fixed.jpg" />
       </div>
     </div>
-    <div class="row border">
+    <!-- Nursery Post -->
+    <div class="row border news">
+      <div class="one-third column">
+        <div class="nursery-slider">
+          <div><img class="u-max-full-width" src="images/nursery-1.jpg"/></div>
+          <div><img class="u-max-full-width" src="images/nursery-2.jpg"/></div>
+          <div><img class="u-max-full-width" src="images/nursery-3.jpg"/></div>
+        </div>
+      </div>
+      <div Class="two-thirds column">
+        <h3>Nursery Work Has Begun</h3>
+        <p>
+          We've started work on the nursery. While looking at the walls and deciding what colors to paint them we found
+          out we had red oak hard wood floors underneath. We've decided to restore them before painting.
+        </p>
+      </div>
+    </div>
+    <!-- Gender Reveal -->
+    <div class="row border news">
+      <div Class="two-thirds column">
+        <h3>It's a boy!</h3>
+        <p>
+          Plain as day there it is. Were so excited and hoping to have a name picked out soon. Were working 
+          on finishing our registry and to have the links for that soon.
+        </p>
+      </div>
+      <div class="one-third column">
+        <div class="gender-slider">
+          <div><img class="u-max-full-width" src="images/its-a-boy-1.JPG"/></div>
+          <div><img class="u-max-full-width" src="images/its-a-boy-2.JPG"/></div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- 7 week ultra sound -->
+    <div class="row border news">
       <div class="one-third column">
         <img class="u-max-full-width" src="images/7-wk-ultrasound.jpg" />
       </div>
@@ -85,12 +121,12 @@
     </div>
     <div class="row">
       <div class="one-half column mb-1">
-        <h5 class="m-0"><span class="accent-underline">Do you want a boy or girl?</span></h5>
-        <p class="m-0">We want a boy (but happy with either).</p>
+        <h5 class="m-0"><span class="accent-underline">Whats the sex?</span></h5>
+        <p class="m-0">It's a <b>BOY!</b></p>
       </div>
       <div class="one-half column mb-1">
         <h5 class="m-0"><span class="accent-underline">Are you registered anywhere?</span></h5>
-        <p class="m-0">Not until we find out the sex. (Nov 22nd!)</p>
+        <p class="m-0">We are at <a href="https://www.amazon.com/baby-reg/your-registry/2PMAKXMNVD89D">Amazon</a>.</p>
       </div>
     </div>
     <div class="row">
@@ -118,6 +154,8 @@
 
 
 </body>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 <script>
   const dueDate = dayjs('2021-04-13');
@@ -130,6 +168,37 @@
   const dayEle = document.getElementById('dayNum');
   weekEle.innerHTML = weeksPreg;
   dayEle.innerHTML = daysPreg;
+
+  
+  tns({
+    container: '.nursery-slider',
+    items: 1,
+    slideBy: 'page',
+    mouseDrag: true,
+    autoplay: true,
+    controls: false,
+    nav: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false
+  });
+  tns({
+    container: '.gender-slider',
+    items: 1,
+    slideBy: 'page',
+    mouseDrag: true,
+    autoplay: true,
+    controls: false,
+    nav: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false
+  });
+  // simpleslider.getSlider({
+  //     container: document.getElementById('nurserySlider'),
+  //     init: -100,
+  //     show: 0,
+  //     end: 100,
+  //     unit: '%'
+  //   });
 </script>
 
 </html>

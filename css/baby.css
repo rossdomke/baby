@@ -1,6 +1,7 @@
 :root { 
   --font-color: #1B3627;
-  --background-color: #EFE8DF;
+  --font-color-darker: #0E1B14;
+  --background-color: #D5E8EC;
   --accent-light-blue: #E4ECF1;
   --accent-yellow: #F3CE68;
 }
@@ -23,9 +24,26 @@ h1 {
 .text-center { 
   text-align: center;
 }
+a {
+  color: var(--font-color);
+}
+a:hover {
+  color: var(--font-color-darker);
+}
 .m-0 {
   margin: 0;
 }
 .mb-1 {
   margin-bottom: 10px;
 }
+
+.news {
+  margin-bottom: 5px;
+}
+/* 
+.slider { width: 100%; padding-bottom: 25%; }
+.slider img { width: 100%; }
+.wrapper { width: 100%; margin: 0; }
+@media only screen and (min-width: 1024px) {
+  .wrapper { width: 1024px; margin: auto; }
+} */
