@@ -1,9 +1,10 @@
 :root { 
-  --font-color: #1B3627;
-  --font-color-darker: #0E1B14;
-  --background-color: #D5E8EC;
+  --font-color: white;
+  --font-color-darker: #ccc;
+  --background-color: #141414;
   --accent-light-blue: #E4ECF1;
   --accent-yellow: #F3CE68;
+  --accent-color: #F3CE68;
 }
 
 body { 
@@ -12,13 +13,13 @@ body {
 }
 
 .accent-underline { 
-  border-bottom: solid 2px var(--accent-yellow);
+  border-bottom: solid 2px var(--accent-color);
 }
 h1 { 
   font-size: 8rem;
 }
 .border { 
-  border: solid 1px var(--accent-yellow);
+  border: solid 1px var(--accent-color);
   padding: 1%;
 }
 .text-center { 
@@ -36,7 +37,9 @@ a:hover {
 .mb-1 {
   margin-bottom: 10px;
 }
-
+.my-4 {
+  margin: 25px 0;
+}
 .news {
   margin-bottom: 5px;
 }
