@@ -58,6 +58,34 @@
         <img class="u-max-full-width" src="images/baby-announcement-fixed.jpg" />
       </div>
     </div>
+     <!-- Baby Shower -->
+     <div class="row border news">
+      <div Class="column">
+        <h3>Baby Shower <small><small><small><small><small>soon...</small></small></small></small></small></h3>
+        <p>
+          I don't know what happened, but suddenly were at 31 weeks and the shower is just around the corner. 
+          The baby shower is going to be on <b>Feb 20th at 1pm</b>. On the day of the shower if you come back to this page there will be a URL where you can view the stream.  
+        </p>
+      </div>
+    </div>
+     <!-- Nursery Followup -->
+     <div class="row border news">
+      <div Class="two-thirds column">
+        <h3>Nursery is almost done</h3>
+        <p>
+          We're so happy with how the floors turned out. We've been getting things here and there and putting them up in the roomm. 
+          We keep comparing the teeny tiny little boy pants to Braylens little boy pants. It's crazy how big they grow in such a short 
+          time. 
+        </p>
+      </div>
+      <div class="one-third column">
+        <div class="nursery-follow-slider">
+          <div><img class="u-max-full-width" src="images/nursery-follow-1.jpg"/></div>
+          <div><img class="u-max-full-width" src="images/nursery-follow-2.jpg"/></div>
+          <!-- <div><img class="u-max-full-width" src="images/nursery-follow-3.jpg"/></div>D -->
+        </div>
+      </div>
+    </div>
     <!-- Nursery Post -->
     <div class="row border news">
       <div class="one-third column">
@@ -68,7 +96,7 @@
         </div>
       </div>
       <div Class="two-thirds column">
-        <h3>Nursery Work Has Begun</h3>
+        <h3>Nursery work has begun</h3>
         <p>
           We've started work on the nursery. While looking at the walls and deciding what colors to paint them we found
           out we had red oak hard wood floors underneath. We've decided to restore them before painting.
@@ -169,7 +197,17 @@
   weekEle.innerHTML = weeksPreg;
   dayEle.innerHTML = daysPreg;
 
-  
+  tns({
+    container: '.nursery-follow-slider',
+    items: 1,
+    slideBy: 'page',
+    mouseDrag: true,
+    autoplay: true,
+    controls: false,
+    nav: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false
+  });
   tns({
     container: '.nursery-slider',
     items: 1,
