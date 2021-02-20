@@ -75,7 +75,7 @@
     <!-- Baby Shower -->
     <div class="row border news">
       <div class="one-third column">
-        <div class="nursery-follow-slider">
+        <div class="shower-thankyou-slider">
           <div><img class="u-max-full-width" src="images/the-shower-shenanigans.png" /></div>
         </div>
       </div>
@@ -240,6 +240,17 @@
   weekEle.innerHTML = weeksPreg;
   dayEle.innerHTML = daysPreg;
 
+  tns({
+    container: '.shower-thankyou-slider',
+    items: 1,
+    slideBy: 'page',
+    mouseDrag: true,
+    autoplay: true,
+    controls: false,
+    nav: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false
+  });
   tns({
     container: '.nursery-follow-slider',
     items: 1,
